@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        超链接标签
+        a
+            href --用于定义跳转目标资源的地址
+             ---完整的url
+             ---相对路径 以当前资源的所在路径为出发点去找目标资源
+                        ./  --表示当前资源所在路径，可以省略不写
+                        ../ --表示当前资源的上层路径
+             ---绝对路径
+                    --无论当前资源在哪里，总是一固定位置出发去找目标资源
+                    -- 以/开头
+            target---用于定义目标资源的打开方式
+                _self  --在当前窗口打开目标资源
+                _blank  --开启新窗口打开目标资源
+        
+    -->
+    <a href="http://www.atguigu.com/" target = "_blank">尚硅谷</a>
+    <a href="02标题段落换行.html" target = "_blank">标题标签</a>
+    <a href="a/b/test.html" target = "_blank">test</a>
+    <a href="a/b/test.html" target = "_blank">test</a>
+    <!--绝对路径的写法-->
+    <a href="/demo1-html/a/b/test.html" target = "_blank">test</a>
+</body>
+</html>
