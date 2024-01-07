@@ -14,8 +14,16 @@
                 绝对路径
             method 定义数据的提交方式
                 get  
+                    数据直接暴露在地址栏，不安全
+                    地址栏长度有限制，所以提交量不大
+                    地址栏上，只能是字符，不能提交文件 
                     
                 post
+                    参数默认不放过url后
+                    数据不会直接暴露在地址栏，相对安全
+                    数据是单独打包通过请求体发送，提交的数据量大
+                    请求体是字符，也可以是字节
+                    相比于get，效率低
 
             表单项标签
             表单项标签一定要定义name属性，该属性用于明确提交时的参数名
@@ -25,10 +33,51 @@
                     password 密码框
                     submit 提交按钮
                     reset 重置按钮
+                    radio 单选框
+                                多个单选框有使用name属性值，就会有互斥效果
+                    checkbox       复选框
+                    hidden     隐藏域  不显示在界面上，但是提交时候会携带
+                textarea 文本域 多行文本框
+                select 文本框
+                 option
     -->
     <form action ="08welcome.html" method="get">
+        <!--
+            希望用提交一些特定的信息，但是考虑安全问题，或者用户操作问题，不希望该数据发生改变
+            readonly 只读 提交时 携带
+            disabled 不可用提交 不携带
+        -->
+        <input type="hidden" name="id" value="123">
+        <input type="text" name="pid" value="456" readonly><br>
+        <input type="text" name="tid" value="123" disabled><br>
+
         用户名：<input type="text" name="username"/> <br>
         密码：<input type="password" name="userPwd"/> <br>
+        性别：
+            <input type ="radio" name="gender" value="1" checked="checked"> 男
+            <input type ="radio" name="gender" value="0"> 女
+            <br>
+        爱好：
+            <input type="checkbox" name="hobby" value="1" checked> 篮球
+            <input type="checkbox" name="hobby" value="2"> 足球
+            <input type="checkbox" name="hobby" value="3"> 羽毛球
+            <input type="checkbox" name="hobby" value="4"> 乒乓球
+            <br>
+        个人简介：
+            <textarea name= "intro" style="width:300px;height:100px;"> </textarea>
+            <br>
+        籍贯：
+            <select name="pro">
+                <option value="1">京</option>
+                <option value ="2">苏</option>
+                <option value="3">陕</option>
+                <option value="0" selected >--请选择</option>
+            </select>
+            <br>
+        选择头像:
+            <input type="file">
+        <br>    
+
         <input type ="submit" value="登录">
         <input type="reset" value="清空">
     </form>
