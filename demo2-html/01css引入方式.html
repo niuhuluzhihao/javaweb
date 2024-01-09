@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            width: 60px;height: 60px;background-color: rgb(166,232,66);color: white;
+        font-size: 20px;font-family:'隶书';border:2px solid green;border-radius: 5px;"
+        }
+    </style>
+
+</head>
+<body>
+    <!--
+        引入方式
+        方式1 行内式
+            通过元素的style属性引入样式
+            语法：stype=“样式名：样式值"
+            缺点：代码复用度低；css样式代码和html代码交织在一起，影响文件大小，影响性能
+
+        内嵌式
+            通过在head标签中style标签定义本页面的公共样式
+
+        外部样式表
+            将css代码单独放入一个css文件张工，哪个html需要这些代码就在head中通过link标签引入
+    -->
+    <input type="button"value="按钮"
+        style="width: 60px;height: 40px;background-color: rgb(166,232,66);color: white;
+        font-size: 20px;font-family:'隶书';border:2px solid green;border-radius: 5px;">
+    <input type="button"value="按钮">
+    <input type="button"value="按钮">
+    <input type="button"value="按钮">
+    <input type="button"value="按钮">
+    <input type="button"value="按钮">
+
+
+
+
+
+</body>
+</html>
