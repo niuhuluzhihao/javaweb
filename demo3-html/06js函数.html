@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        函数声明
+        function 函数名  fun(){}
+        var 函数名=fun(){}
+        和java相比有如下特点
+        没有访问修饰符
+        没有返回值类型也没有void 如果有值要返回，直接return即可
+        没有异常列表
+        调用和方法，实参和形参可以在数量上不一致，在方法内部可以通过argument获得调用时候的实参
+        函数可以作为参数传递给另外一个方法
+        */
+        // 声明函数
+        /*function sum(a,b){
+            return a+b
+        }*/
+        var sum =function(a,b){
+            console.log(arguments)
+            return a+b
+        }
+        // 调用函数，接受结果
+        // var result = sum (10,20,30,40)
+        // console.log(result)
+
+        function add(getSum){
+            return getSum(20,30)
+        }
+
+        var result = add(sum)
+        console.log(result)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
