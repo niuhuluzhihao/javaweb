@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            // alert("单机了")
+            console.log("单机了")
+        }
+
+        function fun2(){
+            // alert("单机了2")
+            console.log("单机了2")
+        }
+
+        function fun3(){
+            console.log("双击了")
+        }
+
+        function fun4(){
+            console.log("鼠标悬停了")
+        }
+
+        function fun5(){
+            console.log("鼠标移动了")
+        }
+
+        function fun6(){
+            console.log("鼠标离开了")
+        }
+
+        function fun7(){
+            console.log("按键按下了")
+        }
+
+        function fun8(){
+            console.log("按键抬起了")
+        }
+        
+        /*
+        事件绑定方式
+            通过元素的属性绑定  on***
+            通过DOM编程动态绑定
+            注意事项：
+                一个事件可以同时绑定多个函数
+                一个元素可以同时绑定多个事件
+
+        常见的事件
+            鼠标事件  onclick ondbclick onmouseover onmousemove onmouseleave
+            键盘事件 onkeydown onkeypress
+            表单事件 onfocus onchange
+            页面加载时间 onload
+
+        事件的触发
+            行为的触发
+            DOM编程的触发
+
+
+        */
+       function testFocus(){
+           console.log("获得焦点了")
+       }
+       function testBlur(){
+           console.log("获得焦点了")
+       }
+       function testChange(value){
+           console.log("内容改变了")
+       }
+       function testchange2(value){
+           console.log("选项发生了变换")
+       }
+       function testsubmit(){
+           var flag= confirm("确认要提交吗")
+           if (!flag){
+               return false
+            //    event.preventDefault
+            
+           }
+           return true
+           /*
+            弹窗的三种方式
+            alert() 信息提示框
+            prompt() 信息输入框
+            confirm() 信息确认框
+           */
+
+            //    alert("表单发生提交了"
+           //在这里可以阻止组件的提交
+       }
+
+       function testrest(){
+           alert("表单重置了")
+       }
+    </script>
+</head>
+<body>
+    <form action="01js引入方式.html" method="get" onsubmit="return testsubmit()" onreset="testrest()">
+        用户昵称:<input type = "text" name="realName" onfocus="testFocus()" onblur="testBlur()" 
+        onchange="testchange(this.value)"><br>
+        登录账号:<input type ="text" name ="logoinName"><br>
+        <input type="submit" value="注册">
+        <input type="reset" value ="清空">
+        选择籍贯:
+            <select onchange = "testchange2(this.value)">
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+            </select>
+
+
+
+
+    </form>
+
+    <hr>
+    <input type ="button" value="按钮" onclick="fun1() ,fun2()" ondbclick ="fun3()">
+    <br>
+    <img src = "E:\code\javaweb\demo1-html\img\log.jpg" onmouseover="fun4()" onmousemove ="fun5()" onmouseleave="fun6()">
+    <br>
+    <input type ="text" onkeydown="fun7()" onkeyup="fun8()">
+
+</body>
+</html>

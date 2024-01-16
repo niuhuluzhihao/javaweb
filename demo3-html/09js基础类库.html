@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        js 
+        数据变量
+        运算符
+        流程控制
+        函数
+        对象
+        常见对象
+        */
+       // 数组的创建
+       var arr =new Array()
+       console.log(arr)
+       console.log(arr.length)
+       arr[0] = "张三"
+       arr[1]  =10
+       arr[9] = true
+       arr.length = 20
+       console.log(arr)
+       console.log(arr.length)
+
+       var fruits = ["apple","orange","banana"]
+       var fruits2 = ["荔枝","玉米","榴莲"]
+       var fruitsAll = fruits.concat(fruits2)
+       console.log(fruits)
+       console.log(fruits2)
+       console.log(fruitsAll)
+       var res = fruitsAll.pop()
+       console.log(res)
+       console.log(fruitsAll)
+       fruitsAll.push("葡萄")
+       console.log(len)
+       console.log(fruitsAll)
+       //查找榴莲
+       var index1 = fruitsAll.indexOf("榴莲")
+       var index2 =fruitsAll.lastIndexOf("榴莲")
+       console.log(index1)
+       console.log(index2)
+
+       // 反转
+       fruitsAll.reverse()
+       console.log(fruitsAll)
+       //转换字符串
+       console.log(fruitsAll.join("-"))
+
+       //选取
+       console.log(fruitsAll.slice(2,4))
+       //删除或者增加
+       console.log(fruitsAll)
+       // 从索引为2的地方增加这两个元素，如果fruitsAll.splice(2,0)这样写，那么就是从索引为2的位置删除0个
+       fruitsAll.splice(2,0,"el1","el2")
+       console.log(fruitsAll)
+
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+                /*
+        事件绑定方式
+            通过元素的属性绑定  on***
+            通过DOM编程动态绑定
+            注意事项：
+                一个事件可以同时绑定多个函数
+                一个元素可以同时绑定多个事件
+
+        常见的事件
+            鼠标事件  onclick ondbclick onmouseover onmousemove onmouseleave
+            键盘事件 onkeydown onkeypress
+            表单事件 onfocus onchange
+            页面加载事件 onload 
+
+        事件的触发
+            行为的触发
+            DOM编程的触发
+            */
+
+        
+
+
+    </script>
+    <script>
+        window.onload = function ready(){
+        // 通过dom获得要操作的元素
+        var div1 = document.getElementById("d1")
+        div1.onclick=function(){
+            div1.style.backgroundColor="red"
+        }
+        var btn = document.getElementById("btn1")
+            btn.onclick=function(){
+                alert("按钮单机了") 
+                //通过dom编程触发事件，相当于某些事件发生了
+                div1.onclick()
+
+            }
+
+        // 为div绑定事件
+        var div1 = document.getElementById("d1")
+        div1.onclick=function(){
+            div1.style.backgroundColor="red"
+        }
+        }
+  
+    </script>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body > 
+    <div id ="d1" class="div1"></div>
+    <button id="btn1">按钮</button>
+    <a href="./13BOM編程常見API.html">11页</a>
+
+
+    
+</body>
+</html>

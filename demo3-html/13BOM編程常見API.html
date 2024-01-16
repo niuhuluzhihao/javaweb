@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*window
+        三种弹窗方式
+        window .可以省略不写
+            alert
+            prompt
+            confirm
+        定时任务
+
+        history 窗口的访问历史
+        location
+
+        session
+        sessionStorge  --用于存储会画数据
+        localStorge   ----用户存储持久级别数据
+        console log
+
+        
+
+
+        */
+       function fun1(){
+           window.alert("hello")
+       }
+       function fun2(){
+           var res = window.prompt("hello,请输入姓名")
+           console.log(res)
+       }
+       function fun3(){
+           var res = window.confirm("hello")
+           console.log(res)
+       }
+       function fun4(){
+           window.setTimeout(function(){
+               console.log("hello")
+           },2000)
+        }
+
+        function funA(){
+            history.back()
+        }
+        function funB(){
+            // history.forward()
+            history.go()
+        }
+        function funC(){
+            // histCory.forward()
+            location.href="http://www.atguigu.com"
+        }
+        function funD(){
+            sessionStorage.setItem("keya","valuea")
+            localStorage.setItem("keyb","valueb")
+
+        }
+
+        function funE(){
+            console.log(sessionStorage.getItem("keya"))
+            console.log(localStorage.getItem("keyb"))
+        }
+
+        function funF(){
+            sessionStorage.removeItem("keya")
+            localStorage.removeItem("keyb")
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+    <button onclick="funD()">存储数据</button>
+    <button onclick="funE()">读取数据</button>
+    <button onclick="funF()">清空数据</button>
+
+    
+
+    <hr>
+    <button onclick="funC()">尚硅谷</button>
+
+    <hr>
+    <button onclick="funA()">上一页</button>
+    <button onclick="funB()">下一页</button>
+    <a href="http://www.atguigu.com">尚硅谷</a>
+
+    <button onclick="fun1()">信息提示框</button>
+    <button onclick="fun2()">信息输入框</button>
+    <button onclick ="fun3()">信息确认框</button>
+    <button onclick ="fun4()">两秒钟之后输出结果</button>
+</body>
+</html>
