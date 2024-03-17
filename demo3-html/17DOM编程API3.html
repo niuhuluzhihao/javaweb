@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        获得document，dom树
+        window.document
+        从document中获取要操作的元素
+        直接获取
+        间接获取
+
+        对元素进行操作
+        操作元素的属性
+        操作元素的样式
+        操作的文本
+        增删元素
+
+        */
+       function addCs(){
+           // 创建一个新的元素
+           // 设置子元素的属性和文本
+           var csli = document.createElement("li")
+           csli.id="cs"
+           csli.innerText ="长沙"
+           var cityu1 = document.getElementById("city")
+           cityu1.append(csli)
+
+
+       }
+       function addbeforeCs(){
+           // 创建一个新的元素
+           // 设置子元素的属性和文本
+           var csli = document.createElement("li")
+           csli.id="cs"
+           csli.innerText ="长沙"
+           var cityu1 = document.getElementById("city")
+           var szli = document.getElementById("sz")
+           cityu1.insertBefore(csli,szli)
+
+
+       }
+
+
+       function replaceSz(){
+           // 创建一个新的元素
+           // 设置子元素的属性和文本
+           var csli = document.createElement("li")
+           csli.id="cs"
+           csli.innerText ="长沙"
+           var cityu1 = document.getElementById("city")
+           var szli = document.getElementById("sz")
+           cityu1.replaceChild(csli,szli)
+
+
+       }
+
+       function removeSz(){
+           // 创建一个新的元素
+           // 设置子元素的属性和文本
+
+           var szli = document.getElementById("sz")
+           szli.remove()
+
+
+       }
+
+       function clearCity(){
+           var cityu1 = document.getElementById("city")
+        //    var fc = cityu1.firstChild
+        //    while (fc !=null){
+        //        fc.remove()
+        //        fc = cityu1.firstChild
+        //    }
+            cityu1.innerHTML = ""
+
+       }
+
+
+
+
+
+
+    </script>
+    <style>
+        #in1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <u1 id ="city">
+        <li id ="bj">北京</li>
+        <li id ="sh">上海</li>
+        <li id ="sz">深圳</li>
+        <li id ="gz">广州</li>
+
+
+
+    </u1>
+   
+
+  
+
+    <hr>
+    <button onclick="addCs()">增加长沙</button>
+    <button onclick="addbeforeCs()">在深圳前增加长沙</button>
+    <button onclick="replaceSz()">在深圳前替换长沙</button>
+    <button onclick="removeSz()">删除深圳</button>
+
+    <button onclick="clearCity()">清空城市列表</button>
+
+
+
+
+    
+    
+</body>
+</html>

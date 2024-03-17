@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        获得document，dom树
+        window.document
+        从document中获取要操作的元素
+        直接获取
+        间接获取
+
+        对元素进行操作
+        操作元素的属性
+        操作元素的样式
+        操作的文本
+        增删元素
+
+        */
+
+        function fun1(){
+            var el1 = document.getElementById("username")  // 根据元素的id值获取页面的唯一元素
+            console.log(el1)
+
+        }
+
+        function fun2(){
+            var els =document.getElementsByTagName("input")  //根据元素的标签名获取多个同名元素
+            for (var i=0;i<els.length;i++){
+                console.log(els[i])
+            }
+
+        }
+
+        function fun3(){
+            var els =document.getElementsByName("aaa")
+            for (var i=0;i<els.length;i++){
+                console.log(els[i])
+            }
+        }
+
+        function fun4(){
+            var els =document.getElementsByClassName("a")   // 根据元素的class进行获取
+            for (var i=0;i<els.length;i++){
+                console.log(els[i])
+            }
+        }
+
+        function fun5(){
+            var div01 =document.getElementById("div01")   // 根据元素的class进行获取
+            var cs = div01.children
+            for (var i=0;i<cs.length;i++){
+                console.log(cs[i])
+            }
+            console.log(div01.firstElementChild)  //通过父元素获取第一个元素
+            console.log(div01.lastElementChild)   // 通过父元素获取最后一个元素
+        }
+
+        function fun6(){
+            var pinput =document.getElementById("password")   // 根据元素的class进行获取
+            var cs = pinput.parentElement
+            console.log(cs)
+        }
+
+
+        function fun7(){
+            var pinput =document.getElementById("password")   // 根据元素的class进行获取
+            var cs = pinput.previousElementSibling
+            console.log(cs)
+            console.log(pinput.nextElementSibling)
+        }
+
+    function changeAttribute(){
+        var in1 = document.getElementById("in1")
+        console.log(in1.type)
+        console.log(in1.value)
+        in1.type = "button"
+        in1.value="嗨"
+    }
+
+    function changeStyle(){
+        var in1 =document.getElementById("in1")
+        in1.style.color = "green"
+        in1.style.borderRadius = "5px"
+    }
+
+    function changeText(){
+        var div01 = document.getElementById("div01")
+        /*
+        元素名.innnerText
+        元素名.innterHTML
+        */
+       console.log(div01.innerText)
+    //    div01.innerText ="嗨"
+       div01.innerHTML ="<h1>嗨<h1>"
+
+    }
+
+
+
+
+    </script>
+    <style>
+        #in1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <input id ="in1" type ="text" value = "hello" >
+    <div id = "div01">
+        hello
+    </div>
+
+    <hr>
+    <button onclick="changeAttribute()">操作属性</button>
+    <button onclick="changeStyle()">操作样式</button>
+    <button onclick="changeText()">操作文本</button>
+    <!-- <input type ="button" value = "根据标签名获取" onclick="fun2()" id="btn02"/>
+    <input type ="button" value = "根据name属性值获取多个元素" onclick = "fun3()",id ="btn03"/>
+    <input type ="button" value = "根据class属性值获取多个元素" onclick = "fun4()" id ="btn04"/> -->
+
+    
+    
+</body>
+</html>
