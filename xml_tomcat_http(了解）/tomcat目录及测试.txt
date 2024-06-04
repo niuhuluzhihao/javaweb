@@ -1,0 +1,8 @@
+bin
+conf  配置文件
+    server.xml ---配置端口
+lib  第三方包
+logs 日志
+temp 临时文件
+webapps 存放的webapp项目
+work    jsp技术，不关注了
