@@ -1,0 +1,17 @@
+app
+    page -----index.html
+    static
+        img
+            图片
+        css
+            --css
+        js
+            --js
+    WEB_INF（不可以更改）
+        web-inf目录的资源是可以直接被浏览器访问的
+        class  --字节码文件路径
+        lib   ---jar包存放路径
+        web.xml  --项目的配置文件
+
+
+tomacat的部署文档，详见pdf文档

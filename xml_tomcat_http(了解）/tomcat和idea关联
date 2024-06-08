@@ -1,0 +1,4 @@
+建立tomcat和idea的关联
+使用idea创建一个javaweb工程，在web工程中开发代码
+使用idea将工程构建成一个可以发布的app
+使用idea将构建好的app部署到tomcat中，启动运行
