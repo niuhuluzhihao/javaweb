@@ -1,6 +1,7 @@
 package servlet;
 
 import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -24,6 +25,9 @@ import java.io.PrintWriter;
  *  MIME类型响应头    媒体类型，文件类型，响应的数据类型
  *
  */
+
+
+@WebServlet("/user1")
 public class UserHttpServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,8 +39,12 @@ public class UserHttpServlet extends HttpServlet {
             info = "no";
         }
         // 将要响应的数据放入response就可以了
+        // 应该设置content-type内容
         PrintWriter writer = resp.getWriter();
+        resp.setContentType("text/html");
+//        resp.setHeader("Content-Type","text/html");
         writer.write(info);
+
 
     }
 }

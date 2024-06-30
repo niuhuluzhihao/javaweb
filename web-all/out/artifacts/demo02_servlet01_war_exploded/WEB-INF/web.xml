@@ -9,14 +9,46 @@
     servletname用于关联请求的路径
     
     -->
+<!--    <servlet>-->
+<!--        <servlet-name>userServlet</servlet-name>-->
+<!--        <servlet-class>servlet.UserHttpServlet</servlet-class>-->
+<!--            -->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>userServlet</servlet-name>-->
+<!--        <url-pattern>/userHttpServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+
+    <!--
+       一个servlet——name可以同时对应多个url-pattern的
+       一个servlet标签可以对应多个servlet-mapping标签
+       url-pattern
+        精确匹配
+        模糊匹配（了解）
+            *作为通配符
+            /匹配全部，不包含jsp文件
+            /* 匹配全部，包含jsp文件
+            /a/* 匹配前缀，后缀模糊
+            *.action 匹配后缀，前缀模糊
+
+    -->
     <servlet>
-        <servlet-name>userServlet</servlet-name>
-        <servlet-class>servlet.UserHttpServlet</servlet-class>
-            
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>servlet.Servlet1</servlet-class>
+
     </servlet>
     <servlet-mapping>
-        <servlet-name>userServlet</servlet-name>
-        <url-pattern>/userHttpServlet</url-pattern>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/s1</url-pattern>
+        <url-pattern>/xx1</url-pattern>
+
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/a</url-pattern>
+        <url-pattern>/b</url-pattern>
+
     </servlet-mapping>
     
 </web-app>
