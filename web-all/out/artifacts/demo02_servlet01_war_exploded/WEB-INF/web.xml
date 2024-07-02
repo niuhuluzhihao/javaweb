@@ -9,15 +9,15 @@
     servletname用于关联请求的路径
     
     -->
-<!--    <servlet>-->
-<!--        <servlet-name>userServlet</servlet-name>-->
-<!--        <servlet-class>servlet.UserHttpServlet</servlet-class>-->
-<!--            -->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>userServlet</servlet-name>-->
-<!--        <url-pattern>/userHttpServlet</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>servlet.UserHttpServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userHttpServlet</url-pattern>
+    </servlet-mapping>
 
 
     <!--
@@ -33,22 +33,22 @@
             *.action 匹配后缀，前缀模糊
 
     -->
-    <servlet>
-        <servlet-name>servlet1</servlet-name>
-        <servlet-class>servlet.Servlet1</servlet-class>
+<!--    <servlet>-->
+<!--        <servlet-name>servlet1</servlet-name>-->
+<!--        <servlet-class>servlet.servlet.Servlet2</servlet-class>-->
 
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>servlet1</servlet-name>
-        <url-pattern>/s1</url-pattern>
-        <url-pattern>/xx1</url-pattern>
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>servlet1</servlet-name>-->
+<!--        <url-pattern>/s1</url-pattern>-->
+<!--        <url-pattern>/xx1</url-pattern>-->
 
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>servlet1</servlet-name>
-        <url-pattern>/a</url-pattern>
-        <url-pattern>/b</url-pattern>
+<!--    </servlet-mapping>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>servlet1</servlet-name>-->
+<!--        <url-pattern>/a</url-pattern>-->
+<!--        <url-pattern>/b</url-pattern>-->
 
-    </servlet-mapping>
-    
+<!--    </servlet-mapping>-->
+<!--    -->
 </web-app>
