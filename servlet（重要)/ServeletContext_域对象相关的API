@@ -1,0 +1,9 @@
+一些用于存储数据和传递数据的对象，传递数据不同的范围，我们称之为不同的域
+servletcontext 代表应用，所以servletcontext也叫做应用域，是webapp中最大的域，可以在本应用内实现数据的共享和传递
+
+作为域对象，一定有的三个api
+
+
+setAttribute
+getAttribute
+rmoveAttribute  移除域的对象

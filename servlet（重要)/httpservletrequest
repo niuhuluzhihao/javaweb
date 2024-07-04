@@ -1,0 +1,15 @@
+
+httpservletrequest
+    获取相关请求头，请求协议，请求的相关参数
+
+
+uri 和URL
+
+uri ----- 项目的资源路径
+    统一资源标识符    interface uri
+URL ------项目资源的完成路径
+    统一资源定位符  URL implement uri
+
+本应用容器的端口号
+客户端发请求时使用的端口号
+客户端软件的端口号
