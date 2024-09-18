@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/web-all/demo02-servlet01/demo02-servlet01.iml" filepath="$PROJECT_DIR$/web-all/demo02-servlet01/demo02-servlet01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-all/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig（了解）.iml" filepath="$PROJECT_DIR$/web-all/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig（了解）.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-all/demo04-forward-redirect/demo04-forward-redirect.iml" filepath="$PROJECT_DIR$/web-all/demo04-forward-redirect/demo04-forward-redirect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-all/demo1-web01/demo1-web01.iml" filepath="$PROJECT_DIR$/web-all/demo1-web01/demo1-web01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaweb.iml" filepath="$PROJECT_DIR$/.idea/javaweb.iml" />
+    </modules>
+  </component>
+</project>

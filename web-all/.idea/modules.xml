@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo02-servlet01/demo02-servlet01.iml" filepath="$PROJECT_DIR$/demo02-servlet01/demo02-servlet01.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig.iml" filepath="$PROJECT_DIR$/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo04-forward-redirect/demo04-forward-redirect.iml" filepath="$PROJECT_DIR$/demo04-forward-redirect/demo04-forward-redirect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo05-path/demo05-path.iml" filepath="$PROJECT_DIR$/demo05-path/demo05-path.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1-web01/demo1-web01.iml" filepath="$PROJECT_DIR$/demo1-web01/demo1-web01.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/web-all.iml" filepath="$PROJECT_DIR$/.idea/web-all.iml" />
     </modules>

@@ -1,0 +1,30 @@
+
+
+html乱码-----
+
+Tomcat 乱码--- windows下终端和tomcat的编解码方式不同
+
+sout 乱码 ---
+
+
+get乱码问题
+    get方式时候，form表单提交的参数会放在uri后面，编码受到的chareset的影响
+    ---设置server.xml connector URIEncoding = ""
+
+post乱码问题
+    post方式的时候，form表单提交的参数会放在请求体中，编码会受到chareset的影响
+    ---设置 req.setCharacterEncoding("")\
+
+
+备注：tomcat10，默认不会出现问题。tomcat8或者tomcat9可能会出现问题
+
+
+
+
+88 响应乱码问题
+
+    // 设置响应体使用UTF-8编码
+    setCharacterEncoding("UTF=8")
+
+    // 设置content-type响应头，告诉客户端用UTF-8解码
+    setContentType("text/html;charset=UTF-8")
