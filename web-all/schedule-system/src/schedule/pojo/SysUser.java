@@ -33,58 +33,5 @@ public class SysUser implements Serializable {
 
     private Integer uid;
 
-    public SysUser() {
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SysUser sysUser = (SysUser) o;
-        return Objects.equals(username, sysUser.username) && Objects.equals(userPwd, sysUser.userPwd) && Objects.equals(uid, sysUser.uid);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(username, userPwd, uid);
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getUserPwd() {
-        return userPwd;
-    }
-
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
-    }
-
-    public Integer getUid() {
-        return uid;
-    }
-
-    public void setUid(Integer uid) {
-        this.uid = uid;
-    }
-
-    @Override
-    public String toString() {
-        return "SysUser{" +
-                "username='" + username + '\'' +
-                ", userPwd='" + userPwd + '\'' +
-                ", uid=" + uid +
-                '}';
-    }
-
-    public SysUser(String username, String userPwd, Integer uid) {
-        this.username = username;
-        this.userPwd = userPwd;
-        this.uid = uid;
-    }
 }
