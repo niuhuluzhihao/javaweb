@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-06-cookie-session/demo-06-cookie-session.iml" filepath="$PROJECT_DIR$/demo-06-cookie-session/demo-06-cookie-session.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo02-servlet01/demo02-servlet01.iml" filepath="$PROJECT_DIR$/demo02-servlet01/demo02-servlet01.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig.iml" filepath="$PROJECT_DIR$/demo03-servletConfig-servletconfig（了解）/demo03-servletConfig-servletconfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo04-forward-redirect/demo04-forward-redirect.iml" filepath="$PROJECT_DIR$/demo04-forward-redirect/demo04-forward-redirect.iml" />

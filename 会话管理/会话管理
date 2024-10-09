@@ -1,0 +1,15 @@
+cookie是在客户端保留少量数据的技术，主要通过响应头向客户端响应一些客户端要保留的信息
+session是在服务端保留更多数据的技术，主要通过httpsession对象保存一些和客户端相关的信息
+
+举例：相当于cookie是银行卡密码，session是银行卡账户
+
+
+
+cookie
+    cookie是一种客户端会话技术，cookie由服务端产生，他是服务端放在浏览器的一小部分数据
+
+cookie
+    会话级cookie
+    持久型cookie
+
+
