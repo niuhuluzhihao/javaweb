@@ -2,7 +2,7 @@
   <artifact type="exploded-war" name="demo-06:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/demo_06_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="demo-06/web/Web" />
+      <element id="javaee-facet-resources" facet="demo-06-cookie-session/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="demo-06-cookie-session" />
