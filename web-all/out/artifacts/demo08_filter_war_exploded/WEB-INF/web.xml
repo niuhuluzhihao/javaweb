@@ -6,18 +6,56 @@
     <!--
     配置过滤器
     -->
+<!--    <filter>-->
+<!--        <filter-name>loggingFilter</filter-name>-->
+<!--        <filter-class>filter.LoggingFilter</filter-class>-->
+<!--    </filter>-->
+<!--    &lt;!&ndash; 配置过滤器的过滤资源规则  路径&ndash;&gt;-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>loggingFilter</filter-name>-->
+<!--        &lt;!&ndash; 根据请求的资源路径，对指定的请求进行过滤-->
+<!--        /a/* 过滤以a开头的资源&ndash;&gt;-->
+
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
     <filter>
-        <filter-name>loggingFilter</filter-name>
-        <filter-class>filter.LoggingFilter</filter-class>
+        <filter-name>filter1</filter-name>
+        <filter-class>filter.Filter1</filter-class>
     </filter>
     <!-- 配置过滤器的过滤资源规则  路径-->
     <filter-mapping>
-        <filter-name>loggingFilter</filter-name>
+        <filter-name>filter1</filter-name>
         <!-- 根据请求的资源路径，对指定的请求进行过滤
         /a/* 过滤以a开头的资源-->
 
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>filter2</filter-name>
+        <filter-class>filter.Filter2</filter-class>
+    </filter>
+    <!-- 配置过滤器的过滤资源规则  路径-->
+    <filter-mapping>
+        <filter-name>filter2</filter-name>
+        <!-- 根据请求的资源路径，对指定的请求进行过滤
+        /a/* 过滤以a开头的资源-->
+
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>filter3</filter-name>
+        <filter-class>filter.Filter3</filter-class>
+    </filter>
+    <!-- 配置过滤器的过滤资源规则  路径-->
+    <filter-mapping>
+        <filter-name>filter3</filter-name>
+        <!-- 根据请求的资源路径，对指定的请求进行过滤
+        /a/* 过滤以a开头的资源-->
+
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
 
     -->
 </web-app>
