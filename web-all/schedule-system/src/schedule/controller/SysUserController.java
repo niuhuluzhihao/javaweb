@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import schedule.pojo.SysUser;
 import schedule.service.SysUserService;
 import schedule.service.impl.SysUserServiceImpl;
@@ -50,6 +51,9 @@ public class SysUserController extends BaseController {
         } else if (! MD5Util.encrypt(userPwd).equals(loginUser.getUserPwd())) {
             resp.sendRedirect("/loginUserPwdError.html");
         }else{
+            // 登录成功之后，将登录的用户信息放入session
+            HttpSession session = req.getSession();
+            session.setAttribute("sysUser",loginUser);
             resp.sendRedirect("/showSchedule.html");
         }
 
