@@ -45,9 +45,23 @@
             if(!username4eg.test(username)){
                 usernameMsg.innerText="格式有误"
                 return false
-            } 
-            usernameMsg.innerText="Ok"
-            return true 
+            }
+            // 格式正确，通过之后，就继续校验用户是否被占用
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange=function{
+                if (httpRequest.readyState==4&&httpRequest.status==200){
+                    // console.log(httpRequest.responseText)
+                    // var input = document.getElementById("message");
+                    // input.value = httpRequest.responseText;
+
+                    window.location.href = "https://www.baidu.com/";
+                }
+                httpRequest.open("GET", "/user/checkUsername?username="+username);
+
+                httpRequest.send();
+            }
+            // usernameMsg.innerText="Ok"
+            // return true
         }
         function checkUserPwd(){
             var userPwd4eg = /^\d{6}$/
@@ -57,7 +71,9 @@
             if(!userPwd4eg.test(userPwd)){
                 userPwdMsg.innerText="格式有误"
                 return false
-            } 
+            }
+
+
             userPwdMsg.innerText="Ok"
             return true 
         }

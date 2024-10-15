@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getMessage(){
+            //实例化一个xmlhttprequest
+            var httpRequest = new XMLHttpRequest();
+            // 设置xmlhttprequest对象的回调函数
+            httpRequest.onreadystatechange=function (){
+                if (httpRequest.readyState==4&&httpRequest.status==200){
+                    // console.log(httpRequest.responseText)
+                    // var input = document.getElementById("message");
+                    // input.value = httpRequest.responseText;
+
+                    window.location.href = "https://www.baidu.com/";
+                }
+            }
+            // 设置发送请求的方式和请求的资源路径
+            httpRequest.open("GET", "/hello?username=zhangsan");
+
+            httpRequest.send();
+
+        }
+    </script>
+</head>
+<body>
+<button onclick="getMessage()">点我</button>
+<input type="text" id ="message"/>
+</body>
+</html>

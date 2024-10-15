@@ -19,6 +19,13 @@ public class SysUserController extends BaseController {
 
     private SysUserService userService = new SysUserServiceImpl();
 
+
+    protected void checkUsername(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+    }
+
+
+
     protected void regist(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1、 接受客戶端接受的參數
         String username = req.getParameter("username");

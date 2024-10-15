@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo08-filter/demo08-filter.iml" filepath="$PROJECT_DIR$/demo08-filter/demo08-filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo09/demo09.iml" filepath="$PROJECT_DIR$/demo09/demo09.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1-web01/demo1-web01.iml" filepath="$PROJECT_DIR$/demo1-web01/demo1-web01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo10-ajax/demo10-ajax.iml" filepath="$PROJECT_DIR$/demo10-ajax/demo10-ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/schedule-system/schedule-system.iml" filepath="$PROJECT_DIR$/schedule-system/schedule-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/web-all.iml" filepath="$PROJECT_DIR$/.idea/web-all.iml" />
     </modules>
