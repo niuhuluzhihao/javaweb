@@ -38,28 +38,33 @@
     </style>
     <script>
         function checkUsername(){
-            var username4eg = /^[a-zA-Z0-9]{5,10}/
+            var usernameReg = /^[a-zA-Z0-9]{5,10}/
             var usernameInput = document.getElementById("usernameInput")  
             var username = usernameInput.value  
             var usernameMsg = document.getElementById("usernameMsg")
-            if(!username4eg.test(username)){
+            if(!usernameReg.test(username)){
                 usernameMsg.innerText="格式有误"
                 return false
             }
+            // 响应乱码问题
+
+            // 响应信息不规范，处理方式不规范
+                // 响应应该是一个json串  {"code":"","message":"","data":{}}
+
+            // 校验不通过，无法阻止表单提交
+
+
             // 格式正确，通过之后，就继续校验用户是否被占用
-            let httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange=function{
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange=function() {
                 if (httpRequest.readyState==4&&httpRequest.status==200){
-                    // console.log(httpRequest.responseText)
-                    // var input = document.getElementById("message");
-                    // input.value = httpRequest.responseText;
-
-                    window.location.href = "https://www.baidu.com/";
+                    usernameMsg.innerText = httpRequest.responseText;
                 }
-                httpRequest.open("GET", "/user/checkUsername?username="+username);
 
-                httpRequest.send();
             }
+            httpRequest.open("GET", "/user/checkUsername?username="+username);
+
+            httpRequest.send();
             // usernameMsg.innerText="Ok"
             // return true
         }

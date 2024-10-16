@@ -21,6 +21,13 @@ public class SysUserController extends BaseController {
 
 
     protected void checkUsername(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username = req.getParameter("username");
+        SysUser sysUser = userService.findByUsername(username);
+        String info = "可用";
+        if(null !=sysUser ){
+            info = "已占用";
+        }
+        resp.getWriter().write(info);
 
     }
 
