@@ -58,15 +58,19 @@
             var httpRequest = new XMLHttpRequest();
             httpRequest.onreadystatechange=function() {
                 if (httpRequest.readyState==4&&httpRequest.status==200){
-                    usernameMsg.innerText = httpRequest.responseText;
+                    console.log(httpRequest.responseText);
+                    var result = JSON.parse(httpRequest.responseText);
+                    if (result.code !=200){
+                        usernameMsg.innerText = "不可用";
+                    }
                 }
 
             }
             httpRequest.open("GET", "/user/checkUsername?username="+username);
 
             httpRequest.send();
-            // usernameMsg.innerText="Ok"
-            // return true
+            usernameMsg.innerText="Ok"
+            return true
         }
         function checkUserPwd(){
             var userPwd4eg = /^\d{6}$/

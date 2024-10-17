@@ -1,11 +1,14 @@
 package schedule.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import schedule.common.Result;
+import schedule.common.ResultCodeEnum;
 import schedule.pojo.SysUser;
 import schedule.service.SysUserService;
 import schedule.service.impl.SysUserServiceImpl;
@@ -23,10 +26,13 @@ public class SysUserController extends BaseController {
     protected void checkUsername(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         SysUser sysUser = userService.findByUsername(username);
-        String info = "可用";
+        Result result = Result.ok(null);
         if(null !=sysUser ){
-            info = "已占用";
+            result = Result.build(null, ResultCodeEnum.USERNAME_USERD);
         }
+        ObjectMapper objectMapper = new ObjectMapper();
+        String info = objectMapper.writeValueAsString(result);
+        resp.setContentType("application/json;charset=UTF-8");
         resp.getWriter().write(info);
 
     }
