@@ -13,6 +13,7 @@ import schedule.pojo.SysUser;
 import schedule.service.SysUserService;
 import schedule.service.impl.SysUserServiceImpl;
 import schedule.utils.MD5Util;
+import schedule.utils.WebUtils;
 
 import java.io.IOException;
 
@@ -30,10 +31,11 @@ public class SysUserController extends BaseController {
         if(null !=sysUser ){
             result = Result.build(null, ResultCodeEnum.USERNAME_USERD);
         }
-        ObjectMapper objectMapper = new ObjectMapper();
-        String info = objectMapper.writeValueAsString(result);
-        resp.setContentType("application/json;charset=UTF-8");
-        resp.getWriter().write(info);
+        WebUtils.writeJson(resp,result);
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        String info = objectMapper.writeValueAsString(result);
+//        resp.setContentType("application/json;charset=UTF-8");
+//        resp.getWriter().write(info);
 
     }
 
