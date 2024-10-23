@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let不可以重复声明
+
+        // let有块级作用域，非函数的花括号遇见let会有块级作用域，也就是只能在花括号里面访问
+        {
+            let j = 1
+            console.log(j)
+        }
+        //let不会预解析进行变量提升(也就是先声明再使用)
+
+        // let定义的全局变量不会作为windows的属性
+
+        //let在es6中推荐优先使用
+
+        // const 是不可以修改的let，类似java中的final变量
+
+        // 处理多行的时候可以使用  ``
+        const PI = 3.14
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr =[11,22,33,44]
+        // 使用结构表达式取出数据中的元素
+        let [a,b,c,d,e] = arr
+        console.log(a,b,c,d,e)
+
+        let person = {
+            name:"张三",
+            age :10
+        }
+        // 使用结构表达式获取对象的属性
+        let{age,name} = person
+        console.log(age,name)
+
+        // 解构表达式应用在方法的参数列表
+        function showArr([a,b,c]){
+            console.log(a,b,c)
+
+        }
+
+        showArr(arr)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

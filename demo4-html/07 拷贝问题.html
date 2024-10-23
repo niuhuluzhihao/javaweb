@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 浅拷贝  --复制第二个的时候，第一个也会相应变化
+        let  arr = [1,2,3]
+        let arr2 = arr
+        arr[0]= 100
+        console.log(arr2)
+
+        // 深拷贝
+        let arr2 =[...arr]
+        arr[0] =100
+        console.log(arr2)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // rest ，剩余的，解决剩余参数的接收问题
+        let fun1 = (a,b,c,d,... arr)=>{
+            console.log(a,b,c,d)
+            console.log(arr)
+
+
+        }
+        fun1(1,2,3,4,5,6,7,8,9)
+
+        // spread 展开，rest在实参中的使用
+        let arr = [1,2,3]
+        let fun2 = (a,b,c)=>{
+            console.log(a,b,c)
+        }
+        fun2(...arr)  // 这样写，相当于作为函数的入参使用
+
+        // 快速合并数组和对象
+
+        let a = [1,2,3]
+        let b = [1,2,3]
+        let c = [1,2,3]
+        let d =[...a,...b,...c]
+        console.log(d)
+
+        // 快速合并对象
+        let pp = {name:'12'}
+        let pp1 = {nam:'12'}
+        let pp2 = {na:'12'}
+        let pp3 ={...pp,...pp1,...pp2}
+        console.log(pp3)
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

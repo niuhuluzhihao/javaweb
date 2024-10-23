@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fun1 = function(){}
+        let fun2 =()=>{}
+        let fun3 = (x) =>{return x +1}
+        let fun4 =x=>{return x+1}
+        let fun5 = x=> console.log(x)
+        let fun6=x => x+1  // 方法体
+        
+        // 箭头函数没有自己的this
+        // 箭头函数中的this是外层上下文环境中的this
+        let person = {
+            name :"zhangsan",
+            showName:function(){
+                console.log(this.name)},
+            viewName : ()=>{console.log(this.name)}
+            }
+        person.showName()
+        person.viewName()
+
+    </script>
+</head>
+<body>
+    
+
+    
+</body>
+</html>
