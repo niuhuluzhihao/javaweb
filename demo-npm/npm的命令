@@ -1,0 +1,9 @@
+npm  init -y  初始化操作项目
+
+npm install -g   下载依赖到全局的模块
+
+npm ls   查看安装了哪些依赖
+
+npm list -g 查看全局依赖
+
+npm run 取决于package.json中scripts的指令
