@@ -1,30 +1,20 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+ <script setup>
+ /*
+ 在.vue文件中的style文件
+ 将css文件保存到独立的css文件中，那个.vue文件需要，就在哪里导入
+ 如果某个样式要在所有的的.vue文件中生效，可以在main.js中导入
+ */ 
+
+import "./style/test.css"
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <span class="s1"> 你好</span>
+  
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
