@@ -3,12 +3,8 @@
 v-text识别不了带有html格式的文本
 v-bind：href 可以不使用v-bind直接：href就可以了
 v-on:事件名 @事件名
-
-ref 函数 更适合单个变量
-reacitve 更适合对象
-
 */
-import { ref,reactive } from 'vue';
+import { ref } from 'vue';
 
   function fun(){
     alert("hi")
@@ -26,34 +22,19 @@ import { ref,reactive } from 'vue';
   function fun4(){
     alert("链接被点击了")
   }
-
-  let person = reactive({
-    name:"",
-    age:""
-  })
-
-  function incrAge(){
-    person.age++
-  }
-
 </script>
 
 <template>
 <div>
-  <button @click="fun()">hello</button>
+  <button v-on:click="fun()">hello</button>
   <button v-on:click="fun1()">+</button>
   <button v-on:click="counter++">+</button>
+  <button v-on:click.once="counter++">+</button>
   {{counter}}
-  <hr>
-  <button @click="incrAge()">+</button>
-    <button @click="person.age++">+</button>
 
-  {{person.age}}
-
-
-  <!-- <br>
+  <br>
   <a href = "https://www.baidu.com/" v-on：click="fun3()"> 百度</a>
-    <a href = "https://www.baidu.com/" v-on：click.prevent="fun3()"> 百度</a> -->
+    <a href = "https://www.baidu.com/" v-on：click.prevent="fun3()"> 百度</a>
 
 
 
