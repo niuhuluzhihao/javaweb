@@ -2,13 +2,27 @@
   import Header from  './components/Header.vue'
   import Content from  './components/Content.vue'
   import Navigator from  './components/Navigator.vue'
+  import {ref} from "vue"
+
+let message = ref("")
+
+// app.vue发送到content.vue
+let menu = ref("")
+
+function reveiver(data){
+  message.value =data
+}
+
 </script>
 
 <template>
   <div>
+
+    {{message}}
+    <hr>
     <Header class="header"></Header>
-    <Content class="navigator"></Content>
-    <Navigator class = "content"></Navigator>
+    <Content class="navigator":message = "message"></Content>
+    <Navigator @sendMenu ="reveiver" class = "content"></Navigator>
   </div>
 </template>
 
