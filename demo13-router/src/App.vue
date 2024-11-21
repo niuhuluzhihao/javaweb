@@ -9,19 +9,32 @@
   function goMyPage(){
     router.push(myPath.value)
   }
+
+  function showDetail(id,language){
+    router.push(`/showDetail/${id}/${language}`)
+  } 
+  
+  function showDetail2(id,language){
+    router.push(`/showDetail2?id=1&language=java`)
+  }
+
 </script>
 
 <template>
 <div>
-   // 该标签会被替换出具体的.vue
-   <router-link to="/add">add</router-link><br>
-   <router-link to="/update">update</router-link><br>
+   <router-link to="/showDetail/1/java">声明式路由传参</router-link><br>
+   <button @click="showDetail(2,'PHP')">编程式路由传参</button>
+   <hr>
+   <router-link to="/showDetail2?id=1&language=java">声明式键值对传参</router-link><br>
+   <button @click="showDetail(3,'Python')">编程式路由传参</button>
+   <!-- <router-link to="/update">update</router-link><br>
    <router-link to="/list">list</router-link><br>
    <router-link to="/home">home</router-link><br>
    <button @click="showList()">list</button>
-   <button @click="goMyPage()">Go</button><input type="text" v-model="myPath">
+   <button @click="goMyPage()">Go</button><input type="text" v-model="myPath"> -->
 
    <router-view></router-view><br>
+
    // 编程式路由
  </div>
 </template>
