@@ -21,7 +21,7 @@ function checkUsername() {
     return false;
   }
   // 通过校验
-  usernameMsg.value = "O-";
+  usernameMsg.value = "OK";
   return true;
 }
 // 校验密码的方法
@@ -35,7 +35,7 @@ function checkUserPwd() {
     return false;
   }
   // 通过校验
-  userPwdMsg.value = "O-";
+  userPwdMsg.value = "OK";
   return true;
 }
 // 校验密码的方法
@@ -56,7 +56,7 @@ function check4eUserPwd() {
     return false;
   }
   // 通过校验
-  reUserPwdMsg.value = "O-";
+  reUserPwdMsg.value = "OK";
   return true;
 }
 </script>
