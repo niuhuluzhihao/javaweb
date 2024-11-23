@@ -44,6 +44,7 @@ router.beforeEach((to,from,next)=>{
     console.log(from.path)
     console.log(to.path)
     next()
+
 })
 
 
