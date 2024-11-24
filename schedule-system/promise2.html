@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // resolve方法，promise会由pending转换为resolved
+        // reject方法，promise会有pending编程reject
+        let promise = new Promise(function(resolve,reject){
+            // console.log("fucntion invoked")
+            // resolve("haha")
+            throw new Error("error message")
+        })
+
+        console.log("other code1")
+        promise.then(
+            // promise转换为resolved状态的时候会执行的函数
+            function(value){
+                console.log("promise success:"+value)
+            }
+        ).catch(
+            function(){
+                console.log("the error")
+                // 当promise状态是reject或者是promise出现异常的时候，会执行的函数
+            }
+        )
+
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+        // asyc 帮助我们使用简洁的语法获得一个promise对象
+        // await 右边如果是一个普通纸值,则直接返回该值,如果右边的是promise,返回是promise成功的状态
+        async function fun1(){
+           return 10     
+        }
+
+        let promise = fun1()
+        promise.then(
+            function(value
+            ){
+                console.log("the success"+value)
+            }
+        ).catch(
+            function(value){
+                  console.log("the error"+value)  
+            }
+        )
+
+
+        async function fun2(){
+            let promise = fun1()
+            let res = await fun1()
+            console.log("await for "+res)
+        }
+        fun2()
+
+    </script>
+
+    
+
+
+    
+</body>
+</html>

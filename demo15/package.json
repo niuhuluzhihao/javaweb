@@ -1,5 +1,5 @@
 {
-  "name": "demo-schedule",
+  "name": "demo15",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
-    "vue": "^3.5.12",
-    "vue-route": "^1.5.1",
-    "vue-router": "^4.4.5"
+    "vue": "^3.5.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
